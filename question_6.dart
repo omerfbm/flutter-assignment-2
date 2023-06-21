@@ -1,3 +1,4 @@
+// Q.6: Remove all false values from Q4 list by using removeWhere or retainWhere property.
 void main() {
   List numbers = [23, 33, 44, 21, 223, 662, 44];
   List emptyList = [];
