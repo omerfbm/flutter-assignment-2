@@ -1,17 +1,33 @@
-// Q.6: Remove all false values from Q4 list by using removeWhere or retainWhere property.
+// Q.6: Create a Map variable named world, then inside it create a countries Map.
+// The key will be the name of the country and the value will have another map containing capitalCity, currency, and language.
+// Use any country key to print the values of Capital & Currency.
 void main() {
-  List numbers = [23, 33, 44, 21, 223, 662, 44];
-  List emptyList = [];
-  for (var i = 0; i < numbers.length; i++) {
-    if (numbers[i] % 2 == 0) {
-      emptyList.add(true);
-    } else {
-      emptyList.add(false);
+  Map<String, dynamic> world = {
+    'countries': {
+      'USA': {
+        'capitalCity': 'Washington D.C.',
+        'currency': 'USD',
+        'language': 'English',
+      },
+      'Japan': {
+        'capitalCity': 'Tokyo',
+        'currency': 'Yen',
+        'language': 'Japanese',
+      },
+      'France': {
+        'capitalCity': 'Paris',
+        'currency': 'Euro',
+        'language': 'French',
+      },
     }
-    ;
-  }
-  print(numbers);
-  print(emptyList);
-  emptyList.removeWhere((element) => element == false);
-  print(emptyList);
+  };
+
+  String countryKey = 'USA';
+  Map countryInfo = world['countries'][countryKey];
+  String capitalCity = countryInfo['capitalCity'];
+  String currency = countryInfo['currency'];
+
+  print('Country: $countryKey');
+  print('Capital City: $capitalCity');
+  print('Currency: $currency');
 }

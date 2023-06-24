@@ -1,10 +1,13 @@
-// Q.8: From Q3 write a program that prints the days that start with the letter "S".
+// Q.8: Remove all false values from the usersEligibility list using removeWhere or retainWhere property.
 void main() {
-  List days = ["Mon", "Tue", "Wed", "Thurs", "Fri", "Sat", "Sun"];
+  List<Map<String, dynamic>> usersEligibility = [
+    {'name': 'John', 'eligible': true},
+    {'name': 'Alice', 'eligible': false},
+    {'name': 'Mike', 'eligible': true},
+    {'name': 'Sarah', 'eligible': true},
+    {'name': 'Tom', 'eligible': false},
+  ];
 
-  print("days ${days}");
-
-  for (var i = 0; i < days.length; i++) {
-    days[i][0] == "S" ? print(days[i]) : null;
-  }
+  usersEligibility.removeWhere((user) => !user['eligible']);
+  print(usersEligibility);
 }

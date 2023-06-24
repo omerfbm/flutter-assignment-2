@@ -1,12 +1,17 @@
-// Q.7: Create a list of numbers & write a program that removes all even numbers from the list and adds 1 to each odd number left.
+// Q.7: Check if "fri" exists in expenses; if it exists, change its value to 5000.0.
+// Otherwise, add 'fri' to expenses and set its value to 5000.0, then print expenses.
 void main() {
-  List numbers = [23, 33, 44, 21, 22, 223, 662, 44];
-  List newArray = [];
-  for (var i = 0; i < numbers.length; i++) {
-    if (numbers[i] % 2 != 0) {
-      newArray.add(numbers[i] + 1);
-    }
+  Map<String, double> expenses = {
+    'mon': 1000.0,
+    'tue': 2000.0,
+    'wed': 3000.0,
+  };
+
+  if (expenses.containsKey('fri')) {
+    expenses['fri'] = 5000.0;
+  } else {
+    expenses['fri'] = 5000.0;
   }
-  print(numbers);
-  print("New Array $newArray");
+
+  print(expenses);
 }

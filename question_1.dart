@@ -1,8 +1,6 @@
-// Q.1: Create a list of names and print all names using the List method.
-void main() {
-  List studentNames = ["ALi", "Hamza", "Omer"];
+// Q.1: Create a list of names and print all names using a list.
 
-  for (var i = 0; i < studentNames.length; i++) {
-    print(studentNames[i]);
-  }
+void main() {
+  List<String> names = ['Omer', 'Ali', 'Hassan', 'Maheen'];
+  names.forEach((e) => print(e));
 }

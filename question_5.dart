@@ -1,17 +1,15 @@
-// Q.5: Create a list of numbers & write a program to get the smallest & greatest number from a list.
+// Q.5: Create a map with name, phone keys and store some values to it.
+// Use where to find all keys that have a length of 4.
+
 void main() {
-  List numbers = [11, 33, 44, 21, 4, 662, 44];
-  var smallestNumber = 0;
-  var largestNumber = 0;
-  for (var i = 0; i < numbers.length; i++) {
-    if (numbers[i] > largestNumber) {
-      largestNumber = numbers[i];
-    }
-    if (numbers[i] < smallestNumber || i == 0) {
-      smallestNumber = numbers[i];
-    }
-  }
-  print("numbers are $numbers");
-  print("Smallest Number is $smallestNumber");
-  print("Largest Number is $largestNumber");
+  Map<String, String> phoneBook = {
+    'ALi': '1234567890',
+    'Hassan': '9876543210',
+    'Omer': '5678901234',
+    'Maheen': '0123456789',
+  };
+
+  List<String> keysWithLength4 =
+      List.of(phoneBook.keys.where((key) => key.length == 4));
+  print(keysWithLength4);
 }
